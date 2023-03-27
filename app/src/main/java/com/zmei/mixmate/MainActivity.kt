@@ -1,7 +1,9 @@
 package com.zmei.mixmate
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import com.zmei.mixmate.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -12,4 +14,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(bind.root)
 
     }
+
+    fun onClick (view: View){
+        val i = Intent(this, MainActivity2::class.java)
+        startActivity(i)
+        }
 }
