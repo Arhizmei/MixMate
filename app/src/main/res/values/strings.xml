@@ -1,5 +1,15 @@
 <resources>
-    <string name="app_name">Mixmate is the best application for calculating the composition of concrete</string>
-    <string name="Next">Далее</string>
-
+    <string name="app_name">Mixmate: Concrete Composition Calculator</string>
+    <string name="next_button">Далее</string>
+    <string name="exit_button">Выйти</string>
+    <string name="parametr">Введите необходимые параметры :</string>
+    <string-array name="cement_grade">
+        <item>M100</item>
+        <item>M150</item>
+        <item>M200</item>
+        <item>M250</item>
+        <item>M300</item>
+        <item>M400</item>
+        <item>M500</item>
+    </string-array>
 </resources>

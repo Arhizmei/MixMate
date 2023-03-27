@@ -29,7 +29,7 @@
         android:layout_marginTop="36dp"
         android:backgroundTint="#DD1313"
         android:onClick="onClick"
-        android:text="@string/Next"
+        android:text="@string/next_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
