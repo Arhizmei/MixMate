@@ -20,6 +20,7 @@ class MainActivity2 : AppCompatActivity() {
         spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinner.adapter = spinnerAdapter
 
+        val selectedItem = spinner.selectedItem.toString()
 
     }
 

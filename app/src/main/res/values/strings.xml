@@ -3,6 +3,8 @@
     <string name="next_button">Далее</string>
     <string name="exit_button">Выйти</string>
     <string name="parametr">Введите необходимые параметры :</string>
+    <string name="cubic">Количество бетона м.куб. :</string>
+
     <string-array name="cement_grade">
         <item>M100</item>
         <item>M150</item>
