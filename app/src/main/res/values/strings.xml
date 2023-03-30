@@ -4,8 +4,13 @@
     <string name="exit_button">Выйти</string>
     <string name="parametr">Введите необходимые параметры :</string>
     <string name="cubic">Количество бетона м.куб. :</string>
-
+    <string name="cement_marka">Выберите марку цемента</string>
+    <string name="button_ok">Посчитать</string>
+    <string name="send">Песка:</string>
+    <string name="gravel">Щебня: </string>
+    <string name="cement">Цемента: </string>
     <string-array name="cement_grade">
+        <item>Выберите марку цемента</item>
         <item>M100</item>
         <item>M150</item>
         <item>M200</item>

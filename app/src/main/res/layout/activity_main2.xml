@@ -5,12 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFC107"
+
     tools:context=".MainActivity2">
 
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
         android:layout_marginBottom="68dp"
         android:backgroundTint="#EF1010"
         android:onClick="exit_button"
@@ -18,7 +20,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button3" />
 
     <TextView
         android:id="@+id/textView2"
@@ -38,6 +41,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:popupBackground="#FFC107"
+        android:prompt="@string/cement"
+        android:scrollbarSize="4dp"
+        android:enabled="true"
         app:layout_constraintEnd_toEndOf="@+id/textView2"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textView2"
@@ -65,16 +71,72 @@
         app:layout_constraintTop_toBottomOf="@+id/spinner1">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edCube"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/cubic"
             android:inputType="number"
             android:shadowColor="@color/black"
-            android:textColorHighlight="@color/black"
             android:textColor="#050000"
 
+            android:textColorHighlight="@color/black"
             android:textColorHint="@color/yellow"
             android:textSize="10sp" />
     </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tvSand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="92dp"
+        android:text="@string/send"
+        android:textColor="#070606"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+
+    <TextView
+        android:id="@+id/tvGravel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="92dp"
+        android:text="@string/gravel"
+        android:textColor="#070606"
+        app:layout_constraintStart_toEndOf="@+id/tvSand"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+
+    <TextView
+        android:id="@+id/tvCement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="184dp"
+        android:layout_marginTop="92dp"
+        android:text="@string/cement"
+        android:textColor="#070606"
+        app:layout_constraintStart_toEndOf="@+id/tvSand"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#EF1010"
+        android:onClick="onClickOk"
+        android:text="@string/button_ok"
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayout"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayout"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+
+    <TextView
+        android:id="@+id/tvMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/button3"
+        app:layout_constraintStart_toStartOf="@+id/button3"
+        app:layout_constraintTop_toBottomOf="@+id/button3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
