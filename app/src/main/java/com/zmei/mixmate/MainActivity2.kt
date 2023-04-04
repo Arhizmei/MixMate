@@ -43,11 +43,11 @@ class MainActivity2 : AppCompatActivity() {
                     var cube1 = bind.edCube.text.toString()
                         cube = cube1.toInt()
                     sand = cube *  870
-                        bind.tvSand.text = "$sand"
+                        bind.tvSand.text = resources.getString(R.string.send) + "$sand"
                     gravel = cube *  1080
-                        bind.tvGravel.text = "$gravel"
+                        bind.tvGravel.text = resources.getString(R.string.gravel) + "$gravel"
                     cement = cube * 214
-                        bind.tvCement.text = "$cement"
+                        bind.tvCement.text = resources.getString(R.string.cement) + "$cement"
 
                     }
 
