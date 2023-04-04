@@ -16,7 +16,6 @@
         <item>M200</item>
         <item>M250</item>
         <item>M300</item>
-        <item>M400</item>
-        <item>M500</item>
+
     </string-array>
 </resources>

@@ -25,39 +25,78 @@ class MainActivity2 : AppCompatActivity() {
 
         }
 
-        fun onClickOk (view: View){
-            var cube = 0
-            var sand = 0
-            var gravel = 0
-            var cement = 0
+    fun onClickOk(view: View) {
+        // Получаем значение, выбранное в Spinner
 
-            spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-                override fun onItemSelected(parent: AdapterView<*>, view: View?, position: Int, id: Long) {
-                    if (position == 0) {
+        val selected = spinner.selectedItemPosition
+        val cube1 = bind.edCube.text.toString()
+        if (cube1.isNullOrEmpty()) {
+            // Если строка пуста, выводим сообщение
+            bind.tvMessageCube.visibility = View.VISIBLE
+            val eror = "Заполни поле!"
+            bind.tvMessageCube.setText(eror)}
+        else {
+            val cube = cube1.toInt()
+        if (selected == 0) {
+            // Если ничего не выбрано, выводим сообщение
+            bind.tvMessage.visibility = View.VISIBLE
+            bind.tvMessage.text = "Выберите марку цемента!"
+            bind.tvMessageCube.visibility = View.VISIBLE
+            val eror = "Заполни поле!"
+            bind.tvMessageCube.setText(eror)
+        } else if (selected == 1) {
+            // Выполняем вычисления, если выбрана марка цемента
+            val cube = cube1.toInt()
+            val sand = cube * 870
+            bind.tvSand.text = resources.getString(R.string.send) + "  $sand кг"
+            val gravel = cube * 1080
+            bind.tvGravel.text = resources.getString(R.string.gravel) + "  $gravel кг"
+            val cement = cube * 214
+            bind.tvCement.text = resources.getString(R.string.cement) + "  $cement кг"
+        } else if (selected == 2) {
+            // Выполняем вычисления, если выбрана марка цемента
 
-                    bind.tvMessage.visibility = View.VISIBLE
-                    bind.tvMessage.text = "Выберите марку цемента!"
+            val cube = cube1.toInt()
+            val sand = cube * 855
+            bind.tvSand.text = resources.getString(R.string.send) + "  $sand кг"
+            val gravel = cube * 1080
+            bind.tvGravel.text = resources.getString(R.string.gravel) + "  $gravel кг"
+            val cement = cube * 235
+            bind.tvCement.text = resources.getString(R.string.cement) + "  $cement кг"
+        } else if (selected == 3) {
+            // Выполняем вычисления, если выбрана марка цемента
 
+            val cube = cube1.toInt()
+            val sand = cube * 795
+            bind.tvSand.text = resources.getString(R.string.send) + "  $sand кг"
+            val gravel = cube * 1080
+            bind.tvGravel.text = resources.getString(R.string.gravel) + "  $gravel кг"
+            val cement = cube * 286
+            bind.tvCement.text = resources.getString(R.string.cement) + "  $cement кг"
+        } else if (selected == 4) {
+            // Выполняем вычисления, если выбрана марка цемента
 
-                    } else if (position == 1) {
-                    var cube1 = bind.edCube.text.toString()
-                        cube = cube1.toInt()
-                    sand = cube *  870
-                        bind.tvSand.text = resources.getString(R.string.send) + "$sand"
-                    gravel = cube *  1080
-                        bind.tvGravel.text = resources.getString(R.string.gravel) + "$gravel"
-                    cement = cube * 214
-                        bind.tvCement.text = resources.getString(R.string.cement) + "$cement"
+            val cube = cube1.toInt()
+            val sand = cube * 750
+            bind.tvSand.text = resources.getString(R.string.send) + "  $sand кг"
+            val gravel = cube * 1080
+            bind.tvGravel.text = resources.getString(R.string.gravel) + "  $gravel кг"
+            val cement = cube * 332
+            bind.tvCement.text = resources.getString(R.string.cement) + "  $cement кг"
+        } else if (selected == 5) {
+            // Выполняем вычисления, если выбрана марка цемента
 
-                    }
+            val cube = cube1.toInt()
+            val sand = cube * 705
+            bind.tvSand.text = resources.getString(R.string.send) + "  $sand кг"
+            val gravel = cube * 1080
+            bind.tvGravel.text = resources.getString(R.string.gravel) + "  $gravel кг"
+            val cement = cube * 382
+            bind.tvCement.text = resources.getString(R.string.cement) + "  $cement кг"
+        }}
 
-                }
-                override fun onNothingSelected(parent: AdapterView<*>) {
-                    bind.tvMessage.visibility = View.VISIBLE
-                    bind.tvMessage.text = "Выберите марку цемента!"
-                }
-        }
     }
+
 
 
 
